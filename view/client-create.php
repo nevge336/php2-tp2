@@ -1,28 +1,34 @@
 {{ include('header.php', {title: 'Ajouter client'})}}
 
 
-<form action="{{path}}client/store" method="post">
-    <label>Nom
-        <input type="text" name="nom">
-    </label>
-    <label>Adresse
-        <input type="text" name="adresse">
-    </label>
-    <label>Code Postal
-        <input type="text" name="postal_code">
-    </label>
-    <label>Courriel
-        <input type="text" name="courriel">
-    </label>
-    <label>Téléphone
-        <input type="text" name="phone">
-    </label>
-    <label>Date de naissance
-        <input type="date" name="naissance">
-    </label>
-    <input type="submit" value="Save">
+        <a href="{{path}}client">Liste</a>
+    </div>
+    
+</div>
+    <form action="{{path}}client/store" method="post">
+        <label>Nom*
+            <input type="text" name="client_name">
+        </label>
+        <label>Contact
+            <input type="text" name="client_contact">
+        </label>
+        <label>Adresse
+            <input type="text" name="client_address">
+        </label>
+        <label>Code Postal
+            <input type="text" name="client_postal_code">
+        </label>
+        <label>Courriel*
+            <input type="email" name="client_email">
+        </label>
+        <label>Téléphone
+            <input type="text" name="client_phone" placeholder="555 555-5555">
+        </label>
 
-</form>
-</body>
+        <input type="submit" value="Sauvegarder">
+    </form>
 
-</html>
+
+    {{ include('footer.php')}}
+
+

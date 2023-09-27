@@ -9,7 +9,7 @@ class Twig
         $twig = new \Twig\Environment($loader, array('auto_reload' => true));
 
         //creer une variable globale Twig
-        $twig->addGlobal('path', 'http://localhost/cours-PHP2/TRAVAUX/php2-tp2/');
+        $twig->addGlobal('path', 'https://e9040356.webdev.cmaisonneuve.qc.ca/php2-tp2/');
 
         echo $twig->render($template, $data);
     }

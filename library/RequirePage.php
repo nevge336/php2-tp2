@@ -9,6 +9,6 @@ class RequirePage
 
     static public function redirect($page)
     {
-        header('location:http://localhost/cours-PHP2/TRAVAUX/php2-tp2/' . $page);
+        header('location: https://e9040356.webdev.cmaisonneuve.qc.ca/php2-tp2/' . $page);
     }
 }

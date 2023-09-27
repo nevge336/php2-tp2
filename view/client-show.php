@@ -5,25 +5,25 @@
     <table>
         <tr>
             <th>Nom: </th>
-            <td>{{client.nom}}</td>
+            <td>{{client_name}}</td>
         </tr>
         <tr>
             <th>Adresse: </th>
-            <td>{{client.adresse}}</td>
+            <td>{{client_address}}</td>
         </tr>
         <tr>
             <th>Code Postal: </th>
-            <td>{{client.postal_code}}</td>
+            <td>{{client_postal_code}}</td>
         </tr>
         <tr>
             <th>Courriel: </th>
-            <td>{{client.courriel}}</td>
+            <td>{{client_email}}</td>
         </tr>
         <tr>
             <th>Téléphone: </th>
-            <td>{{client.phone}}</td>
+            <td>{{client_phone}}</td>
         </tr> 
-        <a href="{{ path }}client/edit/{{ client.id }}">Modifier</a>
+        <a href="{{ path }}client/edit/{{ client_id }}">Modifier</a>
     </table>
     </body>
     </html>

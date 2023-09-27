@@ -1,28 +1,31 @@
-{{ include('header.php', {title: 'Liste client'})}}
+{{ include('header.php', {title: 'Liste clients'})}}
 
 
-<h1>Clients </h1>
+
+        <a href="{{path}}client/create">Ajouter client</a>
+    </div>
 <table>
-    <tr>
-        <th>Nom</th>
-        <th>Adresse</th>
-        <th>Tel</th>
-        <th>Courriel</th>
-    </tr>
-    {% for client in clients %}
+        <tr>
+            <th>Nom</th>
+            <th>Contact</th>
+            <th>Adresse</th>
+            <th>Téléphone</th>
+            <th>Courriel</th>
+        </tr>
 
+      
+        {% for client in clients %}
 
-    <tr>
-        <td><a href="{{ path }}client/show/{{ client.id }}"> {{ client.nom }} </a></td>
-        <td> {{ client.adresse }} </td>
-        <td> {{ client.postal_code }} </td>
-        <td> {{ client.courriel }} </td>
-    </tr>
+                <tr>
+                    <td><a href='{{path}}client/show/{{client_id}}'>{{ client_name }}</a></td>
+                    <td>{{ client_contact }}</td>
+                    <td>{{ client_address }}</td>
+                    <td>{{ client_phone }}</td>
+                    <td>{{ client_email }}</td>
+                </tr>
 
-    {% endfor %}
+        {% endfor %}
 
 </table>
 
-</body>
-
-</html>
+{{ include('footer.php')}}

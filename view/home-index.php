@@ -1,6 +1,6 @@
 {{ include('header.php', {title: 'Welcome'})}}
 
-    <h1>Bienvenue {{ name }}!</h1>
-    <p>OO PHP APP</p>
+    <h1> {{ client_name }}!</h1>
+    
 </body>
 </html>

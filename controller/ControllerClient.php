@@ -2,12 +2,13 @@
 
 RequirePage::model('Client');
 
+
 class ControllerClient extends Controller
 {
     public function index()
     {
         $client = new Client;
-        $select = $client->select();
+        $select = $client->select('client_id');
 
         // $view = new View('client-index');
         // $view->output('clients', $select);
@@ -33,11 +34,10 @@ class ControllerClient extends Controller
 
 
 
-    public function show($id)
+    public function show($client_id)
     {
         $client = new Client;
-        $selectId = $client->selectId($id);
-        // print_r($selectId) ;
+        $selectId = $client->selectId($client_id);
         Twig::render('client-show.php', ['client' => $selectId]);
     }
 

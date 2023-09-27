@@ -7,7 +7,7 @@ class ControllerHome extends Controller
     {
         // $view = new View('home-index');
         // $view->output('name', 'Peter');
-        Twig::render('home-index.php', ['name' => 'Peter']);
+        Twig::render('home-index.php');
     }
 
     public function error()
